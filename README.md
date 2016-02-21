@@ -5,5 +5,5 @@
 
 This data analysis project will analyse data taken from the Titanic on the day it sank. 
 
-It will show interesting patterns in the data, such as what factors may have made you more likely to survive on the day 
-and the most common names on-board the ship.
+It will define interesting patterns taken from different statistics such as the mean age of survivors and non-survivors.
+These patterns will be streamed to a text file so they can be shown on github.
