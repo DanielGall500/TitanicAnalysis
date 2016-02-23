@@ -41,6 +41,35 @@ print "Average age of a passenger: " + str((findAvg(titanic_data, 'Age'))) + "\n
 print "Average age of a survivor: " + str((findAvg(titanic_survivors, 'Age'))) + "\n"
 print "Average age of a non-survivor: " + str((findAvg(titanic_non_survivors, 'Age'))) + "\n"
 
+first_class = np.array([])
+second_class = np.array([])
+third_class = np.array([])
+print "nearly there"
+for person in titanic_data:
+	if(person['Pclass'] == 1):
+		print "First class"
+		first_class = np.append(first_class, person)
+	elif(person['Pclass'] == 2):
+		second_class = np.append(second_class, person)
+	elif(person['Pclass'] == 3):
+		third_class = np.append(third_class, person)
+	#else:
+		#print "Error scanning class: ", person
+
+def survival_likelihood(data):
+	survived = []
+	died = []
+
+	for person in data:
+		if person['Survived'] == 0:
+			died.append(person)
+		elif person['Survived'] == 1:
+			survived.append(person)
+
+	return (len(survived) / len(died)) * 100
+
+print survival_likelihood(first_class)
+
 
 
 
